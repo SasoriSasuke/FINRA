@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Unit Conversion</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Unit Conversion</h2>
+  
+  <form class="form-horizontal" action="/convert" method = "POST">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="inputValue">Input Numerical Value:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" placeholder="Enter input numerical value" name="inputValue" required>
+      </div>
+    </div>
+    
+    <div class="form-group">
+    	<label class="control-label col-sm-2" for="inputUnit">Input Unit of Measure:</label>
+    	<div class="col-sm-10">
+    		<select class="form-control" name="inputUnit">
+		      <option value="Kelvin">Kelvin</option>
+		      <option value="Celsius">Celsius</option>
+		      <option value="Fahrenheit">Fahrenheit</option>
+		      <option value="Rankine">Rankine</option>
+		      <option value="liters">liters</option>
+		      <option value="tablespoons">tablespoons</option>
+		      <option value="cubic-inches">cubic-inches</option>
+		      <option value="cups">cups</option>
+		      <option value="cubic-feet">cubic-feet</option>
+		      <option value="gallons">gallons</option>
+		    </select>
+    	</div>
+    </div>
+    
+    <div class="form-group">
+    	<label class="control-label col-sm-2" for="targetUnit">Target Unit of Measure:</label>
+    	<div class="col-sm-10">
+    		<select class="form-control" name="targetUnit">
+		      <option value="Kelvin">Kelvin</option>
+		      <option value="Celsius">Celsius</option>
+		      <option value="Fahrenheit">Fahrenheit</option>
+		      <option value="Rankine">Rankine</option>
+		      <option value="liters">liters</option>
+		      <option value="tablespoons">tablespoons</option>
+		      <option value="cubic-inches">cubic-inches</option>
+		      <option value="cups">cups</option>
+		      <option value="cubic-feet">cubic-feet</option>
+		      <option value="gallons">gallons</option>
+		    </select>
+    	</div>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="response">Student Response:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" placeholder="Enter student response" name="response" required>
+      </div>
+    </div>
+    
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+	var queryString = window.location.search;
+	var urlSearchParams = new URLSearchParams(queryString);
+	var response = urlSearchParams.get("response");
+	if(response != null) {
+		alert(response);
+	}
+</script>
+
+</body>
+</html>

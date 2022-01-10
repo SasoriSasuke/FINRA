@@ -1,0 +1,20 @@
+{
+  "name": "ventera",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
+    "convert-units": "^2.3.4",
+    "express": "^4.17.2",
+    "multer": "^1.4.4",
+    "temperature-js": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chi Xiao",
+  "license": "ISC"
+}
